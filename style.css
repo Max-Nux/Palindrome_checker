@@ -1,0 +1,133 @@
+/* Allgemeine Stildefinitionen */
+body {
+    font-family: "Georgia", serif;
+    background-color: #e4f7f2; /* Sanftes Mintgrün für den Hintergrund */
+    color: #333; /* Dunkelgrau für den Text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: "Georgia", serif;
+    color: #4e4e4e;
+    font-size: 2.5em;
+    margin-bottom: 1rem;
+}
+
+/* Eingabefeld */
+input {
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #d0d0d0; /* Dezenter Rahmen */
+    border-radius: 15px;
+    width: 300px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #78c2ad; /* Sanftes Blau beim Fokussieren */
+    outline: none;
+    box-shadow: 0 0 8px rgba(120, 194, 173, 0.7);
+}
+
+/* Schaltflächen */
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 5px;
+    font-family: "Arial", sans-serif; /* Sans-Serif für interaktive Elemente */
+}
+
+button:hover {
+    transform: scale(
+        1.05
+    ); /* Schaltflächen werden beim Hover leicht vergrößert */
+}
+
+/* "Check"-Button in beruhigendem Blau */
+button:nth-of-type(1) {
+    background-color: #78c2ad;
+    color: white;
+}
+
+button:nth-of-type(1):hover {
+    background-color: #66b29c;
+}
+
+/* Ergebnisanzeige */
+#info {
+    font-size: 1.2em;
+    margin-top: 20px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.infoHidden {
+    display: none;
+}
+
+.infoTrue {
+    color: #7fc97f; /* Sanftes Grün für positive Antwort */
+    font-weight: bold;
+}
+
+.infoFalse {
+    color: #ff6f61; /* Warmes Rot für negative Antwort */
+    font-weight: bold;
+}
+
+/* Lade- und Fehlermeldungen */
+.infoFalse,
+.infoTrue {
+    display: block;
+}
+
+/* Fehlerhinweis (falls Eingabe fehlt) */
+.infoFalse {
+    background-color: rgba(255, 111, 97, 0.1);
+    padding: 5px 10px;
+    border: 1px solid #ff6f61;
+    border-radius: 8px;
+}
+
+/* Animation für die Ergebnisse */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Hilfsanimation für den Textumkehrprozess */
+input:valid {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Responsivität */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}

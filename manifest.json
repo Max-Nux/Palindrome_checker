@@ -1,0 +1,24 @@
+{
+    "name": "Palindrome Checker",
+    "short_name": "Palindrome",
+    "description": "Check if a word or phrase is a palindrome.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#e4f7f2",
+    "theme_color": "#78c2ad",
+    "icons": [
+        {
+            "src": "img/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "orientation": "portrait",
+    "scope": "/",
+    "lang": "en-US"
+}
